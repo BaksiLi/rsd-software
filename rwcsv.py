@@ -19,5 +19,13 @@ def csv_read(csvfile):
     return number_columns
 
 
+<<<<<<< HEAD
 def csv_write():
     pass
+=======
+def csv_write(file_name, result):
+    with open("output.csv", "w") as csvfile:
+        writer = csv.writer(csvfile, delimiter=',')
+        writer.writerow(result)
+    
+>>>>>>> fbb2bd53676d45723da76bd222772a24eee4b5c5
