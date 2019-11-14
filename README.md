@@ -11,4 +11,4 @@
 - Main guard as entrypoint for program.
 - Read CSV function and returns a list of lists in `csvrw.py`.
 - Averaging function which averages every list in a list and returns a list of averages.
-- Write function in `csvrw.py` which writes a CSV that contains a list of averages corresponding to the columns in the input data CSV file.
+- Write function in `csvrw.py` that writes a CSV containing a list of averages corresponding to the columns in the input data CSV file.
