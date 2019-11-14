@@ -1,7 +1,7 @@
 import csv
 
 
-def csv_read(csvfile):
+def csv_read(file_name):
     """Reads a CSV file.
 
     Args:
@@ -10,22 +10,18 @@ def csv_read(csvfile):
     Return:
         A list of lists of floats.
     """
-    f = csv.reader(csvfile, delimiter=',', quotechar='|')
-    number_columns = []
-    for i, row in enumerate(f):
-        number_columns.append([])
-        for number in row:
-            number_columns[i].append(float(number))
+    with open(file_name, 'rb') as csvfile:
+        f = csv.reader(csvfile, delimiter=',', quotechar='|')
+        number_columns = []
+        for i, row in enumerate(f):
+            number_columns.append([])
+            for number in row:
+                number_columns[i].append(float(number))
     return number_columns
 
 
-<<<<<<< HEAD
-def csv_write():
-    pass
-=======
 def csv_write(file_name, result):
-    with open("output.csv", "w") as csvfile:
+    with open(file_name, "w") as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow(result)
     
->>>>>>> fbb2bd53676d45723da76bd222772a24eee4b5c5

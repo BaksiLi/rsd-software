@@ -13,4 +13,4 @@ if __name__ == "__main__":
     arguments = parser.parse_args()
     data_columns = csv_read(arguments.inputcsv)
     average_columns = average(data_columns)
-    write_csv = csv_write(average_columns)
+    write_csv = csv_write(arguments.outputcsv, average_columns)
