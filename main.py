@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from average import average
-from rwscv import csv_write, csv_read
+from rwcsv import csv_write, csv_read
+
 
 if __name__ == "__main__":
     """
