@@ -12,10 +12,9 @@ def csv_read(file_name):
     """
     with open(file_name, 'rb') as csvfile:
         f = csv.reader(csvfile, delimiter=',', quotechar='|')
-        number_columns = []
-        for i, row in enumerate(f):
-            number_columns.append([])
-            for number in row:
+        number_columns = [list([]) for _ in range(len(next(f)))]
+        for row in f:            
+            for i, number in enumerate(row):
                 number_columns[i].append(float(number))
     return number_columns
 
